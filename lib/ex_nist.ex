@@ -160,7 +160,8 @@ defmodule ExNist do
   end
 
   @doc """
-  Validate a changeset field for the use of common words in a dictionary file.
+  Validate a changeset field against the `haveibeenpwned.com` api to check whether
+  the password has been breached.
 
   The `opts` accepts :password_breach_client , it defaults to ExNist.PasswordBreachClient.ExPwned
   but can be another module that implements the `ExNist.PasswordBreachClient`
