@@ -16,8 +16,9 @@ defmodule ExNist.PasswordBreachClient.Test do
   end
 
   def password_breach_count(password) do
-    Agent.get(__MODULE__, fn {^password, breach_count} -> breach_count
-    _ -> 0
+    Agent.get(__MODULE__, fn
+      {^password, breach_count} -> breach_count
+      _ -> 0
     end)
   end
 end

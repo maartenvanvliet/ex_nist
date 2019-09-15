@@ -74,7 +74,7 @@ defmodule ExNist do
   """
   def validate_context_specific_words(changeset, field, opts \\ []) do
     Ecto.Changeset.validate_change(changeset, field, :validate_context_specific_words, fn ^field,
-                                                                                 password ->
+                                                                                          password ->
       words = Keyword.get(opts, :words, []) |> Enum.map(fn word -> String.downcase(word) end)
       disallowed_words? = String.contains?(String.downcase(password), words)
 
@@ -107,14 +107,13 @@ defmodule ExNist do
   """
   def validate_derivative_words(changeset, field, opts \\ []) do
     Ecto.Changeset.validate_change(changeset, field, :validate_derivative_words, fn ^field,
-                                                                                 password ->
+                                                                                    password ->
       password = String.downcase(password)
       words = Keyword.get(opts, :words, [])
       similarity_percentage = Keyword.get(opts, :similarity_percentage, 0.75)
 
       similar_word =
         Enum.find(words, fn word ->
-
           String.jaro_distance(password, word) >= similarity_percentage
         end)
 

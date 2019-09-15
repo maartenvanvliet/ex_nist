@@ -15,8 +15,7 @@ defmodule ExNist.Sequence do
       for char <- @ascii_start..(@ascii_end - 2) do
         sequence = char..@ascii_end
 
-        seq =
-          Enum.reduce_while(sequence, [], &build_sequence/2)
+        seq = Enum.reduce_while(sequence, [], &build_sequence/2)
 
         [
           seq |> List.to_string() |> String.downcase(),
@@ -36,6 +35,7 @@ defmodule ExNist.Sequence do
     {:cont, [c | acc]}
   end
 
-  def build_sequence(_c, acc) do {:halt, acc} end
-
+  def build_sequence(_c, acc) do
+    {:halt, acc}
+  end
 end

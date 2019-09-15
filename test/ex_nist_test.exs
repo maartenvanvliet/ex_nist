@@ -79,6 +79,7 @@ defmodule ExNistTest do
   describe "validate breach detection" do
     test "validates presence of breach detection" do
       PasswordBreachClient.Test.start_link({"abc", 5})
+
       build_changeset("abc")
       |> ExNist.validate_password_breach(:password, breach_client: PasswordBreachClient.Test)
       |> assert_changeset_error(
