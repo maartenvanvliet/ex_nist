@@ -1,5 +1,5 @@
 # ExNist
-[![Actions Status](https://github.com/maartenvanvliet/ex_nist/workflows/elixir/badge.svg)](https://github.com/maartenvanvliet/ex_nist/actions)
+[![Actions Status](https://github.com/maartenvanvliet/ex_nist/workflows/Elixir%20CI/badge.svg)](https://github.com/maartenvanvliet/ex_nist/actions)
 [![Hex pm](http://img.shields.io/hexpm/v/ex_nist.svg?style=flat)](https://hex.pm/packages/ex_nist) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/ex_nist) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 -----
 Set of [Ecto.Changeset](https://hexdocs.pm/ecto/Ecto.Changeset.html#content) functions to validate against [NIST guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html#sec5).
