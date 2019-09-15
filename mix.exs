@@ -5,11 +5,11 @@ defmodule ExNist.MixProject do
   def project do
     [
       app: :ex_nist,
-      version: "1.0.0",
+      version: "1.0.1",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       description:
-        "Set of Ecto.Changeset functions to validate against NIST guidelines. (https://pages.nist.gov/800-63-3/sp800-63b.html#sec5)",
+        "Set of Ecto.Changeset functions to validate passwords against NIST guidelines. (https://pages.nist.gov/800-63-3/sp800-63b.html#sec5)",
       source_url: @url,
       deps: deps(),
       docs: [extras: ["README.md"]],
